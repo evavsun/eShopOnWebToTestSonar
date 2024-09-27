@@ -12,4 +12,10 @@ public static class BasketGuards
         if (!basketItems.Any())
             throw new EmptyBasketOnCheckoutException();
     }
+
+    public static void EmptyBasketOnCheckout2(this IGuardClause guardClause, IReadOnlyCollection<BasketItem> basketItems)
+    {
+        if (!basketItems.Any())
+            throw new EmptyBasketOnCheckoutException();
+    }
 }
